@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProfiloUtente</title>
+</head>
+<body>
+<h1>SCHEDA reader:</h1>
+<p><strong>Nome:</strong><span th:text="${reader.getName}"></span></p>
+<p><strong>Password:</strong><span th:text="${reader.getPassword}"></span></p>
+<p><strong>Username:</strong><span th:text="${reader.getUsername}"></span></p>
+<p><strong>Tipologia abbonamento:</strong><span th:text="${reader.getSubscriptionType}"></span></p>
+<br>
+<h2>Cambia Abbonamento</h2>
+<form action="profiloUtente/cambiaAbbonamento" method="post">
+    <label for="nuovoAbbonamento">Nuovo abbonamento</label>
+    <input type="text" id="nuovoAbbonamento" name="nuovoAbbonamento" required>
+    <button type="submit">Cambia</button>
+</form>
+<br>
+<br>
+<h2>Cambia Password</h2>
+<form action="profiloUtente/cambiaPassword" method="post">
+    <label for="nuovaPassword"> Nuova Password</label>
+    <input type="password" id="nuovaPassword" name="nuovaPassword" required>
+    <button type="submit">Cambia</button>
+</form>
+
+
+</body>
+</html>

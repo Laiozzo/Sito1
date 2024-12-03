@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+
+<h1>LOGIN</h1>
+<form action="/login" method="post">
+  <input type="text" name="username" placeholder="Username"/>
+  <input type="text" name="password" placeholder="Password"/>
+  <label for="userType">Tipo di Utente:</label>
+    <select id="userType" name="userType" required>
+        <option value="reader">Reader</option>
+        <option value="author">Author</option>
+    </select>
+  <input type="submit" value="login"/>
+</form>
+
+<H2>REGISTRAZIONE:</H2>
+<form action="/register" method="post">
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username"  required>
+    <br>
+    <br>
+    <label for="password">Password</label>
+    <input type="text" id="password" name="password"  required>
+    <br>
+    <br>
+    <label for="dob">Data di Nascita</label>
+    <input type="text" id="dob" name="dob"  required>
+    <br>
+    <br>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name"  required>
+    <br>
+    <br>
+    <label for="surname">Surname</label>
+    <input type="text" id="surname" name="surname"  required>
+    <br>
+    <br>
+    <label for="userType2">Tipo di Utente:</label>
+    <select id="userType2" name="userType2" required>
+        <option value="reader">Reader</option>
+        <option value="author">Author</option>
+    </select>
+    <button type="submit">Registrati</button>
+</form>
+
+
+</body>
+</html>

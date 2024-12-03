@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PaginaArticoli</title>
+</head>
+<body>
+<h1>Lista degli Articoli</h1>
+<div th:each="articolo" : ${articoli}>
+    <div>
+        <h2 th: text="${articolo.title}">Titolo Articolo</h2>
+        <p><strong>Sinossi:</strong> <span th:text="${articolo.synopsis}"></span></p>
+        <p><strong>Contenuto:</strong> <span th:text="${articolo.content}"></span></p>
+        <p><strong>Scritto in data:</strong> <span th:text="${articolo.wroteOn}"></span></p>
+        <p><strong>Tag:</strong> <span th:text="${articolo.tags}"></span></p>
+        <a th:href="@{dettaglioArticolo(id=${articolo.id})}">DETTAGLIO</a>
+    </div>
+</div>
+</body>
+</html>
